@@ -17,7 +17,7 @@ const DEATH_SOUNDS := [
 	preload("death_02.wav"),
 	preload("death_03.wav"),
 ]
-
+####
 @export var max_health := 5
 @export var speed := 460.0
 @export var drag_factor := 5.0
