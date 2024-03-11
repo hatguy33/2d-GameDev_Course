@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://c6gur0411o2gm"]
+[gd_scene load_steps=3 format=3 uid="uid://c6gur0411o2gm"]
+
+[ext_resource type="Texture2D" uid="uid://bniyrxn3r2v8h" path="res://assets/ship.png" id="1_nf7if"]
+[ext_resource type="Script" path="res://lesson/ship.gd" id="2_3w2ve"]
 
 [node name="Sprite2D" type="Sprite2D"]
+position = Vector2(246, 176)
+texture = ExtResource("1_nf7if")
+script = ExtResource("2_3w2ve")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
